@@ -1,0 +1,26 @@
+/* Font Poppins */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins/Poppins-Light.woff) format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins/Poppins-Regular.woff) format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins/Poppins-Bold.woff) format('woff');
+    font-weight: 400;
+}
+
+/* Font Rubik */
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(fonts/Rubik/Rubik-VariableFont_wght.woff) format('woff');
+}

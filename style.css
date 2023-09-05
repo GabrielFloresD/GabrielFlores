@@ -9,3 +9,44 @@ html {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
+/* Global variables */
+:root {
+    --timingFunction: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Dark mode variables */
+.body-dark {
+    --color1: #BC8CF2;
+    --color2: #8758FF;
+    --color3: #6F38C5;
+    --color4: #191825;
+    --colorBg: #121212;
+    --colorBgHeader: #1F1F1F;
+    --colorShadow1: #00000025;
+}
+
+/* Light mode variables */
+.body-light {
+    --color1: #DFF6FF;
+    --color2: #47B5FF;
+    --color3: #1c5fc3;
+    --color4: #003f66;
+    --colorBg: #f3f3f3;
+    --colorBgHeader: #191919;
+    --colorShadow1: #00000050;
+}
+
+body {
+    background-color: var(--colorBg);
+}
+
+#header {
+    width: 100%;
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--colorBgHeader);
+    box-shadow: 0 .5rem .5rem 0 var(--colorShadow1);
+}

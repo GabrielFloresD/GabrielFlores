@@ -10,43 +10,326 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Global variables */
+                    /* Animaciones */
+
+@keyframes slideOutLeft {
+    0% {
+        left: 30%;
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: 100%;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        left: 30%;
+        opacity: 1;
+    }
+
+}
+
+                    /* Global variables */
 :root {
+    --fontFamily1: 'Poppins', sans-serif;
+    --fontFamily2: 'Rubik', sans-serif;
+    --fontSizeXS: 1.5rem;
+    --fontSizeS: 1.8rem;
+    --fontSizeM: 2rem;
+    --fontSizeL: 2.5rem;
+    --fontSizeXL: 3rem;
     --timingFunction: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Dark mode variables */
-.body-dark {
+            /* Dark mode variables */
+.body.dark {
     --color1: #BC8CF2;
     --color2: #8758FF;
     --color3: #6F38C5;
     --color4: #191825;
     --colorBg: #121212;
     --colorBgHeader: #1F1F1F;
+    --colorBgMenu: #151515;
     --colorShadow1: #00000025;
+    --colorShadow2: #000;
+    --colorText1: #f1f1f1;
+    --colorText2: #ccc;
+    --colorText3: #5f5f5f;
 }
 
-/* Light mode variables */
-.body-light {
+            /* Light mode variables */
+.body.light {
     --color1: #DFF6FF;
     --color2: #47B5FF;
     --color3: #1c5fc3;
     --color4: #003f66;
     --colorBg: #f3f3f3;
     --colorBgHeader: #191919;
+    --colorBgMenu: #141414;
     --colorShadow1: #00000050;
+    --colorText1: #0f0f0f;
 }
 
 body {
+    color: var(--colorText1);
     background-color: var(--colorBg);
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+                    /* HOME */
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/homeBgMobile.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    display: grid;
+    place-items: center;
+}
+
+.home_container {
+    text-align: center;
+    width: fit-content;
+    letter-spacing: 1px;
+    text-shadow: -2px 2px 3px var(--colorShadow2);
+}
+
+.home__h1 {
+    font-size: 4rem;
+}
+
+.home__h3 {
+    color: var(--colorText2);
+    font-family: var(--fontFamily2);
+    font-weight: 300;
+    font-size: var(--fontSizeL);
+}
+
+
+
+                    /* HEADER */
+
 #header {
     width: 100%;
-    height: 8rem;
+    height: 9rem;
+    padding: 1rem;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 500;
+    display: flex;
+    transition: background-color .25s, box-shadow .25s;
+    transition-timing-function: var(--timingFunction);
+}
+
+.header-scroll {
     background-color: var(--colorBgHeader);
     box-shadow: 0 .5rem .5rem 0 var(--colorShadow1);
+}
+
+        /* THEME MODE */
+
+.header_theme {
+    all: unset;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #5f5f5f30;
+}
+
+.header_theme:hover {
+    background-color: #5f5f5f50;
+}
+
+.theme_img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    transform: rotate(180deg);
+    filter: grayscale(1);
+    transition: filter .5s var(--timingFunction);
+}
+
+.light .theme_img,
+.header_theme:hover .theme_img {
+    filter: grayscale(0);
+}
+
+.theme_text {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.light .theme_text {
+    color: #f1f1f1;
+}
+
+            /* NAVBAR */
+
+#navbar {
+    flex-grow: 1;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav_space {
+    flex-grow: 1;
+}
+
+    /* NAVBAR - Logo */
+
+.nav_logo {
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: transform .5s var(--timingFunction);
+}
+
+.nav_logo:hover {
+    transform: translateX(1rem);
+}
+
+.logo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(-2px 2px 2px #000);
+}
+
+.header-scroll .logo_img {
+    filter: none;
+}
+
+    /* NAVBAR - Button Menu */
+
+#btn-menu {
+    all: unset;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid var(--colorText3);
+    display: grid;
+    place-items: center;
+}
+
+.btn_bars,
+.btn_bars::before,
+.btn_bars::after {
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--colorText1);
+    transition-duration: .25s;
+}
+
+.btn_bars::before {
+    content: '';
+    top: -6px;
+}
+
+.btn_bars::after {
+    content: '';
+    top: 6px;
+}
+
+#btn-menu.active .btn_bars {
+    transform: rotate(45deg);
+}
+
+#btn-menu.active .btn_bars::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#btn-menu.active .btn_bars::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+    /* NAVBAR - Menu */
+
+.nav_ul-mobile {
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    top: 9rem;
+    left: 100%;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontFamily2);
+    background-color: var(--colorBgMenu);
+}
+
+.nav_ul-mobile.menu-not-visible {
+    animation: slideOutLeft .75s var(--timingFunction);
+}
+
+.nav_ul-mobile.menu-visible {
+    left: 30%;
+    animation: slideInLeft .5s var(--timingFunction);
+}
+
+.ul-mobile__link {
+    width: 100%;
+    display: inline-block;
+    padding: 3rem 5rem;
+    font-size: var(--fontSizeM);
+    border-bottom: 2px solid #5f5f5f30;
+    transition: letter-spacing .25s var(--timingFunction);
+}
+
+.ul-mobile__link:hover {
+    background-color: #5f5f5f15;
+    letter-spacing: 1.5px;
+}
+
+.link_icon {
+    color: var(--colorText3);
+    vertical-align: text-top;
+    margin-right: .5rem;
+    transition: color .25s var(--timingFunction);
+}
+
+.ul-mobile__link:hover .link_icon {
+    color: var(--colorText1);
 }

@@ -11,9 +11,66 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body class="body-dark">
-    <header id="header"></header>
-    <main id="main"></main>
+<body class="body dark">
+    <header id="header">
+        <nav id="navbar" class="header_nav">
+            <a href="index.html" class="nav_logo">
+                <img src="assets/logo.png" alt="Logo of Gabriel Flores" class="logo_img">
+            </a>
+            <span class="nav_space"></span>
+            <button type="button" id="btn-menu">
+                <span class="btn_bars"></span>
+            </button>
+            <ul class="nav_ul-mobile">
+                <li class="ul-mobile_li">
+                    <a href="#home" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="home"></ion-icon>
+                        <span class="link_text">Home</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#about" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="person"></ion-icon>
+                        <span class="link_text">About</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#services" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="stats-chart-sharp"></ion-icon>
+                        <span class="link_text">Services</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#projects" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="file-tray-full"></ion-icon>
+                        <span class="link_text">Projects</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#contact" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="call"></ion-icon>
+                        <span class="link_text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button type="button" id="btn-theme" class="header_theme">
+            <img src="assets/bulb.svg" alt="Bulb off" class="theme_img">
+            <span class="theme_text">Dark</span>
+        </button>
+    </header>
+    <main id="main">
+        <section id="home">
+            <div class="home_container">
+                <h1 class="home__h1">Gabriel Flores</h1>
+                <h3 class="home__h3">Front-end Developer</h3>
+            </div>
+        </section>
+        <section id="about" class="section"></section>
+        <section id="services" class="section"></section>
+        <section id="projects" class="section"></section>
+        <section id="contact" class="section"></section>
+    </main>
     <footer id="footer"></footer>
     <script src="index.js"></script>
 </body>

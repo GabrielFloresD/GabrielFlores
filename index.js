@@ -30,7 +30,7 @@ toggleMenu.addEventListener("click", () => {
     toggleMenu.classList.toggle("active");
     menu.classList.remove("menu-not-visible");
     if (menu.classList.contains("menu-visible")) {
-        header.classList.add("header-scroll");
+        header.classList.add("header-scroll")
         // Mouse when "click" main, menu close
         main.addEventListener("click", () => {
             menu.classList.remove("menu-visible");
@@ -45,8 +45,13 @@ toggleMenu.addEventListener("click", () => {
                 toggleMenu.classList.remove("active");
             })
         })
+        return;
     } else {
         menu.classList.add("menu-not-visible");
+    }
+    if (menu.classList.contains("menu-not-visible") && (window.scrollY === 0)) {
+        header.classList.remove("header-scroll");
+        return;
     }
 });
 
@@ -97,3 +102,15 @@ toggleTheme.addEventListener("click", ()=> {
         return;
     };
 });
+
+// PROJECTS - change src of imgs
+
+const projectImages = document.querySelectorAll(".card_img");
+
+const mobileMedia = window.matchMedia("(width <= 340px)");
+
+if (mobileMedia.matches) {
+    projectImages.forEach((img) => {
+        img.setAttribute("src","assets/economipedia.webp")
+    });
+}

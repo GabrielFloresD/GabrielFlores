@@ -89,11 +89,11 @@ toggleTheme.addEventListener("click", ()=> {
         bodyElement.classList.add("light");
         themeText.textContent = "Light"
         return;
-    }
+    };
     if (bodyElement.classList.contains("light")) {
         bodyElement.classList.remove("light");
         bodyElement.classList.add("dark");
         themeText.textContent = "Dark"
         return;
-    }
-})
+    };
+});

@@ -100,40 +100,6 @@ a {
 
 
 
-                    /* HOME */
-
-#home {
-    width: 100%;
-    height: 100vh;
-    background-image: url(assets/homeBgMobile.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment:fixed;
-    display: grid;
-    place-items: center;
-}
-
-.home_container {
-    text-align: center;
-    width: fit-content;
-    letter-spacing: 1px;
-    text-shadow: -2px 2px 3px var(--colorShadow2);
-}
-
-.home__h1 {
-    font-size: 4rem;
-}
-
-.home__h3 {
-    color: var(--colorText2);
-    font-family: var(--fontFamily2);
-    font-weight: 300;
-    font-size: var(--fontSizeL);
-}
-
-
-
                     /* HEADER */
 
 #header {
@@ -409,4 +375,159 @@ a {
 .language__li-link:hover {
     background-color: #5f5f5f15;
     letter-spacing: 1.5px;
+}
+
+
+
+
+                    /* MAIN */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+        
+.section {
+    width: 85%;
+    padding: 10rem 0;
+}
+
+.section_h2 {
+    font-size: var(--fontSizeXL);
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+}
+
+.section_h2 span {
+    margin-left: .5rem;
+    font-weight: 400;
+    color: var(--color3);
+}
+
+.section_text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.text_p {
+    color: var(--colorText3);
+    font-size: var(--fontSizeS);
+    font-weight: 400;
+    text-align: center;
+}
+
+.text_p span {
+    color: var(--colorText2);
+    font-weight: 400;
+}
+
+            /* HOME */
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/homeBgMobile.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    display: grid;
+    place-items: center;
+}
+
+.home_container {
+    text-align: center;
+    width: fit-content;
+    letter-spacing: 1px;
+    text-shadow: -2px 2px 3px var(--colorShadow2);
+}
+
+.home__h1 {
+    font-size: 4rem;
+}
+
+.home__h3 {
+    color: var(--colorText2);
+    font-family: var(--fontFamily2);
+    font-weight: 300;
+    font-size: var(--fontSizeL);
+}
+
+
+            /* About */
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about_info {
+    flex-basis: 100%;
+}
+
+.about_skills {
+    flex-basis: 100%;
+}
+
+.skills_h4 {
+    text-align: center;
+    font-size: var(--fontSizeM);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.skills_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skills__skill {
+    flex-basis: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    background-color: #5f5f5f15;
+}
+
+.skills__skill:hover {
+    background-color: #5f5f5f30;
+}
+
+.skill_icon {
+    font-size: 8rem;
+    color: var(--colorText3);
+}
+
+.skill_h6 {
+    font-family: var(--fontFamily2);
+    font-weight: 900;
+    font-size: var(--fontSizeS);
+    color: var(--colorText2);
+}
+
+.skill_icon[class *= "html"] {
+    color: #E44D26;
+}
+
+.skill_icon[class *= "css"] {
+    color: #214CE5;
+}
+
+.skill_icon[class *= "js"] {
+    color: #F7E018;
+}
+
+.skill_icon[class *= "git"] {
+    color: #F05133;
 }

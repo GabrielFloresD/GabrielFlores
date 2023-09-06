@@ -35,15 +35,20 @@ toggleMenu.addEventListener("click", () => {
             menu.classList.add("menu-not-visible");
             toggleMenu.classList.remove("active");
         });
-        // Mouse when "pick" an option in menu
-        menu.addEventListener("mouseup", () => {
-            menu.classList.remove("menu-visible");
-            menu.classList.add("menu-not-visible");
-            toggleMenu.classList.remove("active");
-        });
     } else {
         menu.classList.add("menu-not-visible");
     }
+});
+
+// HEADER - button language 
+
+const toggleLang = document.getElementById("btn-language");
+
+const menuLang = document.querySelector(".language_ul");
+
+toggleLang.addEventListener("click", () => {
+    menuLang.classList.toggle("visible");
+    toggleLang.classList.toggle("active");
 });
 
 // HEADER - button theme mode

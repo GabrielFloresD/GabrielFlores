@@ -23,6 +23,8 @@ const menu = document.querySelector(".nav_ul-mobile");
 
 const main = document.getElementById("main");
 
+const menuLinks = document.querySelectorAll(".ul-mobile__link");
+
 toggleMenu.addEventListener("click", () => {
     menu.classList.toggle("menu-visible");
     toggleMenu.classList.toggle("active");
@@ -30,11 +32,19 @@ toggleMenu.addEventListener("click", () => {
     if (menu.classList.contains("menu-visible")) {
         header.classList.add("header-scroll");
         // Mouse when "click" main, menu close
-        main.addEventListener("click", ()=> {
+        main.addEventListener("click", () => {
             menu.classList.remove("menu-visible");
             menu.classList.add("menu-not-visible");
             toggleMenu.classList.remove("active");
         });
+        // Mouse when "click" an option, menu close
+        menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("menu-visible");
+                menu.classList.add("menu-not-visible");
+                toggleMenu.classList.remove("active");
+            })
+        })
     } else {
         menu.classList.add("menu-not-visible");
     }
@@ -46,9 +56,23 @@ const toggleLang = document.getElementById("btn-language");
 
 const menuLang = document.querySelector(".language_ul");
 
+const menuLangLinks = document.querySelectorAll(".language__li-link");
+
 toggleLang.addEventListener("click", () => {
     menuLang.classList.toggle("visible");
     toggleLang.classList.toggle("active");
+    if (menuLang.classList.contains("visible")) {
+        // Mouse when "click" an option in lang menu, menu close
+        menuLangLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("menu-visible");
+                menu.classList.add("menu-not-visible");
+                toggleMenu.classList.remove("active");
+                menuLang.classList.remove("visible");
+                toggleLang.classList.remove("active");
+            })
+        })
+    }
 });
 
 // HEADER - button theme mode

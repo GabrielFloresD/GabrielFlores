@@ -12,16 +12,16 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="body dark">
-    <header id="header">
-        <nav id="navbar" class="header_nav">
-            <a href="index.html" class="nav_logo">
+    <header id="header" class="flex">
+        <nav id="navbar" class="header_nav flex flex-align-center">
+            <a href="index.html" class="nav_logo flex flex-align-center">
                 <img src="assets/logo.png" alt="Logo of Gabriel Flores" class="logo_img">
             </a>
             <span class="nav_space"></span>
             <button type="button" id="btn-menu">
                 <span class="btn_bars"></span>
             </button>
-            <ul class="nav_ul-mobile">
+            <ul class="nav_ul-mobile flex flex-d-column">
                 <li class="ul-mobile_li">
                     <a href="#home" class="ul-mobile__link">
                         <ion-icon class="link_icon" name="home"></ion-icon>
@@ -53,12 +53,12 @@
                     </a>
                 </li>
                 <li class="ul-mobile_li">
-                    <button type="button" id="btn-language">
+                    <button type="button" id="btn-language" class="flex">
                         <ion-icon class="link_icon" name="language"></ion-icon>
                         <span class="link_text">Language</span>
                         <i class="lang_arrow fa-solid fa-caret-down"></i>
                     </button>
-                    <ul class="language_ul">
+                    <ul class="language_ul flex flex-d-column">
                         <li class="language__li">
                             <a class="language__li-link">English</a>
                         </li>
@@ -69,22 +69,22 @@
                 </li>
             </ul>
         </nav>
-        <button type="button" id="btn-theme" class="header_theme">
+        <button type="button" id="btn-theme" class="header_theme flex flex-d-column flex-align-center flex-justify-center">
             <img src="assets/bulb.svg" alt="Bulb off" class="theme_img">
             <span class="theme_text">Dark</span>
         </button>
     </header>
-    <main id="main">
+    <main id="main" class="flex flex-d-column flex-align-center">
         <section id="home">
             <div class="home_container">
                 <h1 class="home__h1">Gabriel Flores</h1>
                 <h3 class="home__h3">Front-end Developer</h3>
             </div>
         </section>
-        <section id="about" class="section">
+        <section id="about" class="section flex flex-wrap flex-align-center">
             <div class="about_info">
                 <h2 class="section_h2">About me<span>.</span></h2>
-                <div class="section_text">
+                <div class="section_text flex flex-d-column">
                     <p class="text_p">
                         <span class="bold">Creative</span> Front-End Developer <span class="bold">focused</span> on helping any person or company to build <span class="bold">high-level</span> web projects from Buenos Aires, Argentina.
                     </p>
@@ -98,20 +98,20 @@
             </div>
             <div class="about_skills">
                 <h4 class="skills_h4">Habilidades</h4>
-                <div class="skills_container">
-                    <div class="skills__skill">
+                <div class="skills_container flex flex-wrap flex-justify-center">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
                         <i class="skill_icon fa-brands fa-html5"></i>
                         <h6 class="skill_h6">HTML</h6>
                     </div>
-                    <div class="skills__skill">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
                         <i class="skill_icon fa-brands fa-css3-alt"></i>
                         <h6 class="skill_h6">CSS</h6>
                     </div>
-                    <div class="skills__skill">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
                         <i class="skill_icon fa-brands fa-square-js"></i>
                         <h6 class="skill_h6">JavaScript</h6>
                     </div>
-                    <div class="skills__skill">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
                         <i class="skill_icon fa-brands fa-git-alt"></i>
                         <h6 class="skill_h6">Git</h6>
                     </div>
@@ -120,46 +120,46 @@
         </section>
         <section id="services" class="section">
             <h2 class="section_h2">Services<span>.</span></h2>
-            <div class="services_container">
-                <div class="services__service">
+            <div class="services_container flex flex-wrap">
+                <div class="services__service flex flex-align-center">
                     <img src="assets/iconResponsive.svg" alt="Representation of responsive design" class="service_img">
-                    <div class="service_text">
+                    <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Responsive Design</h5>
                         <p class="service__p">
                             Best websites can be viewed from any device and your project will <span class="bold">not be the exception</span>, it will be made in such a way that it doesn't have any error when the <span class="bold">screen change</span>.
                         </p>
                     </div>
                 </div>
-                <div class="services__service">
+                <div class="services__service flex flex-align-center">
                     <img src="assets/iconChat.svg" alt="Representation of communication chat" class="service_img">
-                    <div class="service_text">
+                    <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Communication</h5>
                         <p class="service__p">
                             Communication is <span class="bold">essential</span> to materialize your ideas without problems or confusions, you will always have my contact and I will be <span class="bold">attentive</span> to your suggestions or doubts.
                         </p>
                     </div>
                 </div>
-                <div class="services__service">
+                <div class="services__service flex flex-align-center">
                     <img src="assets/iconCode.svg" alt="Representation of a page's code" class="service_img">
-                    <div class="service_text">
+                    <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Website Code</h5>
                         <p class="service__p">
                             Code of the project will be at <span class="bold">your disposal</span>, you can consult me for the progress and/or if you want changes.
                         </p>
                     </div>
                 </div>
-                <div class="services__service">
+                <div class="services__service flex flex-align-center">
                     <img src="assets/iconTime.svg" alt="Representation of time" class="service_img">
-                    <div class="service_text">
+                    <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Time of Realization</h5>
                         <p class="service__p">
                             Project will be <span class="bold">prioritized</span> to be delivered in <span class="bold">time and form</span>, remember that we will be in touch if it is necessary.
                         </p>
                     </div>
                 </div>
-                <div class="services__service">
+                <div class="services__service flex flex-align-center">
                     <img src="assets/iconSEO.svg" alt="Representation of SEO" class="service_img">
-                    <div class="service_text">
+                    <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Search Engine Optimization</h5>
                         <p class="service__p">
                             The page will be <span class="bold">strategically</span> made with the aim of achieving the optimization necessary for users to find and enter <span class="bold">easily</span> the website.
@@ -170,81 +170,81 @@
         </section>
         <section id="projects" class="section">
             <h2 class="section_h2">Projects<span>.</span></h2>
-            <div class="projects_container">
-                <div class="projects__card">
+            <div class="projects_container flex flex-wrap flex-justify-center">
+                <div class="projects__card flex">
                     <img src="assets/economipediaMobile.webp" alt="Economipedia - Digital School of Financial Education" class="card_img">
-                    <div class="card_text">
+                    <div class="card_text flex flex-d-column">
                         <h4 class="card__h4">Economipedia - Digital School</h4>
                         <p class="card__p">
                             A <span class="bold">redesign</span> of Economipedia, a Spanish Digital School of Financial Education. It has <span class="bold">several sections</span>, some with more changes than others.
                         </p>
                         <span class="card__space"></span>
-                        <div class="card__links">
-                            <a href="https://github.com/GabrielFloresD/Redesign-for-Economipedia" class="card__links-code" target="_blank">
+                        <div class="card__links flex">
+                            <a href="https://github.com/GabrielFloresD/Redesign-for-Economipedia" class="card__links-code flex flex-align-center" target="_blank">
                                 <span>Code</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                             </a>
-                            <a href="https://gabrielfloresd.github.io/Redesign-for-Economipedia/" class="card__links-web" target="_blank">
+                            <a href="https://gabrielfloresd.github.io/Redesign-for-Economipedia/" class="card__links-web flex flex-align-center" target="_blank">
                                 <span>Go to site</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="projects__card">
+                <div class="projects__card flex">
                     <img src="assets/toolPageMobile.webp" alt="toolPage" class="card_img">
-                    <div class="card_text">
+                    <div class="card_text flex flex-d-column">
                         <h4 class="card__h4">toolPage</h4>
                         <p class="card__p">
                             A website for <span class="bold">developers</span> that includes <span class="bold">tools</span> to help in the design of pages, some of them: palettes, icons, fonts, etc.
                         </p>
                         <span class="card__space"></span>
-                        <div class="card__links">
-                            <a href="https://github.com/GabrielFloresD/toolPage" class="card__links-code" target="_blank">
+                        <div class="card__links flex">
+                            <a href="https://github.com/GabrielFloresD/toolPage" class="card__links-code flex flex-align-center" target="_blank">
                                 <span>Code</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                             </a>
-                            <a href="https://gabrielfloresd.github.io/toolPage/" class="card__links-web" target="_blank">
+                            <a href="https://gabrielfloresd.github.io/toolPage/" class="card__links-web flex flex-align-center" target="_blank">
                                 <span>Go to site</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="projects__card">
+                <div class="projects__card flex">
                     <img src="assets/loginPageMobile.webp" alt="Login Page" class="card_img">
-                    <div class="card_text">
+                    <div class="card_text flex flex-d-column">
                         <h4 class="card__h4">Login Page</h4>
                         <p class="card__p">
                             A login page that includes an <span class="bold">animated</span> background and certain characteristic <span class="bold">elements</span> of pages like this type.
                         </p>
                         <span class="card__space"></span>
-                        <div class="card__links">
-                            <a href="https://github.com/GabrielFloresD/Login_page" class="card__links-code" target="_blank">
+                        <div class="card__links flex">
+                            <a href="https://github.com/GabrielFloresD/Login_page" class="card__links-code flex flex-align-center" target="_blank">
                                 <span>Code</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                             </a>
-                            <a href="https://gabrielfloresd.github.io/Login_page/" class="card__links-web" target="_blank">
+                            <a href="https://gabrielfloresd.github.io/Login_page/" class="card__links-web flex flex-align-center" target="_blank">
                                 <span>Go to site</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="projects__card">
+                <div class="projects__card flex">
                     <img src="assets/monsterEnergyMobile.webp" alt="Monster Energy Drinks" class="card_img">
-                    <div class="card_text">
+                    <div class="card_text flex flex-d-column">
                         <h4 class="card__h4">Monster Energy Drinks</h4>
                         <p class="card__p">
                             A <span class="bold">redesign</span> of the Monster Energy website, known energy drinks. It has a <span class="bold">drop-down menu</span>, animations and tabs with scroll.
                         </p>
                         <span class="card__space"></span>
-                        <div class="card__links">
-                            <a href="https://github.com/GabrielFloresD/Product_Landing_Page" class="card__links-code" target="_blank">
+                        <div class="card__links flex">
+                            <a href="https://github.com/GabrielFloresD/Product_Landing_Page" class="card__links-code flex flex-align-center" target="_blank">
                                 <span>Code</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                             </a>
-                            <a href="https://gabrielfloresd.github.io/Product_Landing_Page/" class="card__links-web" target="_blank">
+                            <a href="https://gabrielfloresd.github.io/Product_Landing_Page/" class="card__links-web flex flex-align-center" target="_blank">
                                 <span>Go to site</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
                             </a>
@@ -257,16 +257,16 @@
             <h2 class="section_h2">Contact me<span>.</span></h2>
             <h3 class="section_h3">Ready to bring your ideas to life?</h3>
             <p class="text_p">Available to <span class="bold">listen</span> any proposal and for <span class="bold">work</span> together.</p>
-            <div class="contact_container">
-                <a href="" class="contact__link" target="_blank">
+            <div class="contact_container flex flex-wrap">
+                <a href="" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
                     <i class="contact__link-i fa-brands fa-whatsapp"></i>
                     <h6 class="contact__link-h6">WhatsApp</h6>
                 </a>
-                <a href="https://www.linkedin.com/in/gabriel-alejandro-flores-villagomez-65bb80253/" class="contact__link" target="_blank">
+                <a href="https://www.linkedin.com/in/gabriel-alejandro-flores-villagomez-65bb80253/" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
                     <i class="contact__link-i fa-brands fa-linkedin"></i>
                     <h6 class="contact__link-h6">LinkedIn</h6>
                 </a>
-                <a href="https://github.com/GabrielFloresD" class="contact__link" target="_blank">
+                <a href="https://github.com/GabrielFloresD" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
                     <i class="contact__link-i fa-brands fa-github"></i>
                     <h6 class="contact__link-h6">GitHub</h6>
                 </a>

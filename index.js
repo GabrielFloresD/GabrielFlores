@@ -103,6 +103,28 @@ toggleTheme.addEventListener("click", ()=> {
     };
 });
 
+// HEADER - efect for links "linkes" to sections
+
+const sections = document.querySelectorAll(".section");
+
+let currentSection = "home";
+
+window.addEventListener("scroll", () => {
+    sections.forEach((section) => {
+        if (window.scrollY >= (section.offsetTop - section.clientHeight / 4)) {
+            currentSection = section.id;
+        } else if (window.scrollY === 0) {
+            currentSection = "home"
+        }
+    });
+    menuLinks.forEach((link) => {
+        if (link.href.includes(currentSection)) {
+            document.querySelector(".active-link").classList.remove("active-link");
+            link.classList.add("active-link");
+        }
+    })
+})
+
 // PROJECTS - change src of imgs
 
 const projectImages = document.querySelectorAll(".card_img");
@@ -111,7 +133,23 @@ const mobileMedia = window.matchMedia("(width <= 340px)");
 
 const tabletMedia = window.matchMedia("(width >= 768px)");
 
-if (mobileMedia.matches || tabletMedia.matches) {
+const desktopMedia = window.matchMedia("(width >= 1024px)");
+
+if (mobileMedia.matches) {
+    projectImages[0].setAttribute("src","assets/economipedia.webp");
+    projectImages[1].setAttribute("src","assets/toolPage.webp");
+    projectImages[2].setAttribute("src","assets/loginPage.webp");
+    projectImages[3].setAttribute("src","assets/monsterEnergy.webp");
+}
+
+if (tabletMedia.matches) {
+    projectImages[0].setAttribute("src","assets/economipediaTablet.webp");
+    projectImages[1].setAttribute("src","assets/toolPageTablet.webp");
+    projectImages[2].setAttribute("src","assets/loginPageTablet.webp");
+    projectImages[3].setAttribute("src","assets/monsterEnergyTablet.webp");
+}
+
+if (desktopMedia.matches) {
     projectImages[0].setAttribute("src","assets/economipedia.webp");
     projectImages[1].setAttribute("src","assets/toolPage.webp");
     projectImages[2].setAttribute("src","assets/loginPage.webp");

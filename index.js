@@ -109,8 +109,11 @@ const projectImages = document.querySelectorAll(".card_img");
 
 const mobileMedia = window.matchMedia("(width <= 340px)");
 
-if (mobileMedia.matches) {
-    projectImages.forEach((img) => {
-        img.setAttribute("src","assets/economipedia.webp")
-    });
+const tabletMedia = window.matchMedia("(width >= 768px)");
+
+if (mobileMedia.matches || tabletMedia.matches) {
+    projectImages[0].setAttribute("src","assets/economipedia.webp");
+    projectImages[1].setAttribute("src","assets/toolPage.webp");
+    projectImages[2].setAttribute("src","assets/loginPage.webp");
+    projectImages[3].setAttribute("src","assets/monsterEnergy.webp");
 }

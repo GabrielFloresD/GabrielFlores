@@ -185,7 +185,7 @@ body {
     width: 100%;
     text-align: center;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--colorTextWhite);
 }
 
@@ -422,25 +422,20 @@ body {
 
 .section_h2 {
     font-size: var(--fontSizeXL);
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 5rem;
 }
 
 .light .section_h2 {
-    font-weight: 400;
     letter-spacing: .5px;
 }
 
 .section_h2 span {
     margin-left: .5rem;
-    font-weight: 400;
-    color: var(--color3);
-}
-
-.light .section_h2 span {
     font-weight: 900;
+    color: var(--color3);
 }
 
 .section_text {row-gap: 1.5rem;}
@@ -453,13 +448,12 @@ body {
 }
 
 .light .text_p {
-    font-weight: 300;
     color: var(--colorText1);
 }
 
 .bold {
     color: var(--colorText2);
-    font-weight: 400;
+    font-weight: 900;
 }
 
             /* HOME */
@@ -512,12 +506,8 @@ body {
 .skills_h4 {
     text-align: center;
     font-size: var(--fontSizeM);
-    font-weight: 300;
-    margin: 10rem 0 3rem;
-}
-
-.light .skills_h4 {
     font-weight: 400;
+    margin: 10rem 0 3rem;
 }
 
 .skills_container {gap: 2rem;}
@@ -583,7 +573,6 @@ body {
 }
 
 .light .service__p {
-    font-weight: 300;
     color: var(--colorText1);
 }
 
@@ -659,7 +648,6 @@ body {
 
 .light .card__p {
     color: var(--colorText1);
-    font-weight: 300;
 }
 
 .card__space {
@@ -747,12 +735,12 @@ body {
 .section_h3 {
     text-align: center;
     font-size: var(--fontSizeM);
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 2rem;
 }
 
 .light .section_h3 {
-    font-weight: 400;
+    font-weight: 900;
 }
 
 .contact_container {
@@ -827,13 +815,14 @@ body {
 .footer__text {
     text-align: center;
     font-size: var(--fontSizeXS);
-    color: var(--colorTextWhite);
-    font-weight: 300;
+    color: var(--colorText2);
 }
+
+.light .footer__text {color: var(--colorTextWhite);}
 
 .footer__text-link {
     display: inline-block;
-    font-weight: 400;
+    font-weight: 900;
     letter-spacing: .5px;
     transition: color .25s, transform .5s;
     transition-timing-function: var(--timingFunction);
@@ -1196,7 +1185,7 @@ body {
         padding: 1rem;
         border-bottom: none;
         font-size: var(--fontSizeS);
-        text-shadow: -2px 2px 2px var(--colorShadow2);
+        text-shadow: -1px 1px 1px var(--colorShadow2);
     }
 
     .ul-mobile__link.active-link,

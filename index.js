@@ -150,3 +150,27 @@ const changeImages = (media,img) => {
 changeImages(mobileMedia,"");
 changeImages(tabletMedia,"Tablet");
 changeImages(desktopMedia,"");
+
+// ANIMATIONS CHANGES FOR DEVICES
+
+const projectText = document.querySelectorAll(".card_text");
+
+const otherDisplay = window.matchMedia("(width >= 550px)");
+
+// change aos animation delay of the button theme mode for desktop
+if (desktopMedia.matches) {
+    toggleTheme.setAttribute("data-aos-delay","700");
+}
+
+// change animation of the images and text of projects section for devices wich the display of the elements is diferent than mobile
+if (otherDisplay.matches) {
+    projectImages.forEach((image) => {
+        image.setAttribute("data-aos-delay","100");
+    });
+    projectImages[0].setAttribute("data-aos","fade-right");
+    projectImages[2].setAttribute("data-aos","fade-right");
+    projectText[1].setAttribute("data-aos","fade-right");
+    projectText[3].setAttribute("data-aos","fade-right");
+    projectImages[1].setAttribute("data-aos","fade-left");
+    projectImages[3].setAttribute("data-aos","fade-left");
+}

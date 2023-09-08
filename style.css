@@ -226,7 +226,9 @@ body {
     /* NAVBAR - Button Menu */
 
 #btn-menu {
-    all: unset;
+    background: unset;
+    color: inherit;
+    font-family: inherit;
     position: relative;
     width: 5rem;
     height: 5rem;
@@ -665,6 +667,7 @@ body {
     position: relative;
     column-gap: .5rem;
     font-size: var(--fontSizeXS);
+    font-weight: 900;
 }
 
 .card__links-code {
@@ -848,17 +851,19 @@ body {
 
             /* For Mobile */
 
-@media screen and (height <= 650px) {
+@media screen and (height <= 720px) {
         /* NAVBAR - Menu */
 
     .ul-mobile__link {
         padding: 2rem 5rem;
+        font-size: var(--fontSizeXS);
     }
 
         /* NAVBAR - Language button and menu */
 
     #btn-language {
         padding: 2rem 5rem;
+        font-size: var(--fontSizeXS);
     }
 
     .language__li-link {

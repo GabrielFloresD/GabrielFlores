@@ -14,6 +14,7 @@
     <title>Gabriel Flores | Front-end Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d63180f787.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -22,45 +23,45 @@
 <body class="body dark">
     <header id="header" class="flex">
         <nav id="navbar" class="header_nav flex flex-align-center">
-            <a href="index.html" class="nav_logo flex flex-align-center">
+            <a href="index.html" class="nav_logo flex flex-align-center" data-aos="fade-right" data-aos-duration="500">
                 <img src="assets/logo.png" alt="Logo of Gabriel Flores" class="logo_img">
             </a>
             <span class="nav_space"></span>
-            <button type="button" id="btn-menu">
+            <button type="button" id="btn-menu" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
                 <span class="btn_bars"></span>
             </button>
             <ul class="nav_ul-mobile flex flex-d-column">
-                <li class="ul-mobile_li">
+                <li class="ul-mobile_li" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
                     <a href="#home" class="ul-mobile__link active-link">
                         <ion-icon class="link_icon" name="home"></ion-icon>
                         <span class="link_text">Home</span>
                     </a>
                 </li>
-                <li class="ul-mobile_li">
+                <li class="ul-mobile_li" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
                     <a href="#about" class="ul-mobile__link">
                         <ion-icon class="link_icon" name="person"></ion-icon>
                         <span class="link_text">About</span>
                     </a>
                 </li>
-                <li class="ul-mobile_li">
+                <li class="ul-mobile_li" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
                     <a href="#services" class="ul-mobile__link">
                         <ion-icon class="link_icon" name="stats-chart-sharp"></ion-icon>
                         <span class="link_text">Services</span>
                     </a>
                 </li>
-                <li class="ul-mobile_li">
+                <li class="ul-mobile_li" data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
                     <a href="#projects" class="ul-mobile__link">
                         <ion-icon class="link_icon" name="file-tray-full"></ion-icon>
                         <span class="link_text">Projects</span>
                     </a>
                 </li>
-                <li class="ul-mobile_li">
+                <li class="ul-mobile_li" data-aos="fade-down" data-aos-duration="500" data-aos-delay="500">
                     <a href="#contact" class="ul-mobile__link">
                         <ion-icon class="link_icon" name="call"></ion-icon>
                         <span class="link_text">Contact</span>
                     </a>
                 </li>
-                <li class="ul-mobile_li">
+                <li class="ul-mobile_li" data-aos="fade-down" data-aos-duration="500" data-aos-delay="600">
                     <button type="button" id="btn-language" class="flex">
                         <ion-icon class="link_icon" name="language"></ion-icon>
                         <span class="link_text">Language</span>
@@ -77,7 +78,7 @@
                 </li>
             </ul>
         </nav>
-        <button type="button" id="btn-theme" class="header_theme flex flex-d-column flex-align-center flex-justify-center">
+        <button type="button" id="btn-theme" class="header_theme flex flex-d-column flex-align-center flex-justify-center" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
             <img src="assets/bulb.svg" alt="Bulb off" class="theme_img">
             <span class="theme_text">Dark</span>
         </button>
@@ -85,14 +86,14 @@
     <main id="main" class="flex flex-d-column flex-align-center">
         <section id="home">
             <div class="home_container">
-                <h1 class="home__h1">Gabriel Flores</h1>
-                <h3 class="home__h3">Front-end Developer</h3>
+                <h1 class="home__h1" data-aos="fade-right" data-aos-duration="450" data-aos-delay="250">Gabriel Flores</h1>
+                <h3 class="home__h3" data-aos="fade-left" data-aos-duration="450" data-aos-delay="350">Front-end Developer</h3>
             </div>
         </section>
         <section id="about" class="section flex flex-wrap flex-align-center">
             <div class="about_info">
-                <h2 class="section_h2">About me<span>.</span></h2>
-                <div class="section_text flex flex-d-column">
+                <h2 class="section_h2" data-aos="zoom-in-up" data-aos-duration="600">About me<span>.</span></h2>
+                <div class="section_text flex flex-d-column" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <p class="text_p">
                         <span class="bold">Creative</span> Front-End Developer <span class="bold">focused</span> on helping any person or company to build <span class="bold">high-level</span> web projects from Buenos Aires, Argentina.
                     </p>
@@ -105,21 +106,21 @@
                 </div>
             </div>
             <div class="about_skills">
-                <h4 class="skills_h4">Skills</h4>
-                <div class="skills_container flex flex-wrap flex-justify-center">
-                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                <h4 class="skills_h4" data-aos="zoom-in-up" data-aos-duration="600">Skills</h4>
+                <div class="skills_container flex flex-wrap flex-justify-center" >
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                         <img src="assets/logoHTML.webp" alt="HTML" class="skill_img" loading="lazy">
                         <h6 class="skill_h6">HTML</h6>
                     </div>
-                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                         <img src="assets/logoCSS.webp" alt="CSS" class="skill_img" loading="lazy">
                         <h6 class="skill_h6">CSS</h6>
                     </div>
-                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                         <img src="assets/logoJS.webp" alt="JavaScript" class="skill_img" loading="lazy">
                         <h6 class="skill_h6">JavaScript</h6>
                     </div>
-                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                         <img src="assets/logoGit.webp" alt="Git" class="skill_img" loading="lazy">
                         <h6 class="skill_h6">Git</h6>
                     </div>
@@ -127,9 +128,9 @@
             </div>
         </section>
         <section id="services" class="section">
-            <h2 class="section_h2">Services<span>.</span></h2>
+            <h2 class="section_h2" data-aos="zoom-in-up" data-aos-duration="600">Services<span>.</span></h2>
             <div class="services_container flex flex-wrap">
-                <div class="services__service flex flex-align-center">
+                <div class="services__service flex flex-align-center"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <img src="assets/iconResponsive.svg" alt="Representation of responsive design" class="service_img" loading="lazy">
                     <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Responsive Design</h5>
@@ -138,7 +139,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="services__service flex flex-align-center">
+                <div class="services__service flex flex-align-center"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <img src="assets/iconChat.svg" alt="Representation of communication chat" class="service_img" loading="lazy">
                     <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Communication</h5>
@@ -147,7 +148,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="services__service flex flex-align-center">
+                <div class="services__service flex flex-align-center"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <img src="assets/iconCode.svg" alt="Representation of a page's code" class="service_img" loading="lazy">
                     <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Website Code</h5>
@@ -156,7 +157,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="services__service flex flex-align-center">
+                <div class="services__service flex flex-align-center"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <img src="assets/iconTime.svg" alt="Representation of time" class="service_img" loading="lazy">
                     <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Time of Realization</h5>
@@ -165,7 +166,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="services__service flex flex-align-center">
+                <div class="services__service flex flex-align-center"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <img src="assets/iconSEO.svg" alt="Representation of SEO" class="service_img" loading="lazy">
                     <div class="service_text flex flex-d-column">
                         <h5 class="service__h5">Search Engine Optimization</h5>
@@ -177,11 +178,11 @@
             </div>
         </section>
         <section id="projects" class="section">
-            <h2 class="section_h2">Projects<span>.</span></h2>
+            <h2 class="section_h2" data-aos="zoom-in-up" data-aos-duration="600">Projects<span>.</span></h2>
             <div class="projects_container flex flex-wrap flex-justify-center">
                 <div class="projects__card flex flex-align-center">
-                    <img src="assets/economipediaMobile.webp" alt="Economipedia - Digital School of Financial Education" class="card_img" loading="lazy">
-                    <div class="card_text flex flex-d-column">
+                    <img src="assets/economipediaMobile.webp" alt="Economipedia - Digital School of Financial Education" class="card_img" loading="lazy" data-aos="flip-right" data-aos-duration="700" data-aos-delay="300">
+                    <div class="card_text flex flex-d-column" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
                         <h4 class="card__h4">Economipedia - Digital School</h4>
                         <div class="card__langs flex">
                             <i class="card__langs-i fa-brands fa-html5"></i>
@@ -204,8 +205,8 @@
                     </div>
                 </div>
                 <div class="projects__card flex flex-align-center">
-                    <img src="assets/toolPageMobile.webp" alt="toolPage" class="card_img" loading="lazy">
-                    <div class="card_text flex flex-d-column">
+                    <img src="assets/toolPageMobile.webp" alt="toolPage" class="card_img" loading="lazy" data-aos="flip-right" data-aos-duration="700" data-aos-delay="300">
+                    <div class="card_text flex flex-d-column" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
                         <h4 class="card__h4">toolPage</h4>
                         <div class="card__langs flex">
                             <i class="card__langs-i fa-brands fa-html5"></i>
@@ -229,8 +230,8 @@
                     </div>
                 </div>
                 <div class="projects__card flex flex-align-center">
-                    <img src="assets/loginPageMobile.webp" alt="Login Page" class="card_img" loading="lazy">
-                    <div class="card_text flex flex-d-column">
+                    <img src="assets/loginPageMobile.webp" alt="Login Page" class="card_img" loading="lazy" data-aos="flip-right" data-aos-duration="700" data-aos-delay="300">
+                    <div class="card_text flex flex-d-column" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
                         <h4 class="card__h4">Login Page</h4>
                         <div class="card__langs flex">
                             <i class="card__langs-i fa-brands fa-html5"></i>
@@ -254,8 +255,8 @@
                     </div>
                 </div>
                 <div class="projects__card flex flex-align-center">
-                    <img src="assets/monsterEnergyMobile.webp" alt="Monster Energy Drinks" class="card_img" loading="lazy">
-                    <div class="card_text flex flex-d-column">
+                    <img src="assets/monsterEnergyMobile.webp" alt="Monster Energy Drinks" class="card_img" loading="lazy" data-aos="flip-right" data-aos-duration="700" data-aos-delay="300">
+                    <div class="card_text flex flex-d-column" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
                         <h4 class="card__h4">Monster Energy Drinks</h4>
                         <div class="card__langs flex">
                             <i class="card__langs-i fa-brands fa-html5"></i>
@@ -281,19 +282,21 @@
             </div>
         </section>
         <section id="contact" class="section">
-            <h2 class="section_h2">Contact me<span>.</span></h2>
-            <h3 class="section_h3">Ready to bring your ideas to life?</h3>
-            <p class="text_p">Available to <span class="bold">listen</span> any proposal and for <span class="bold">work</span> together.</p>
+            <h2 class="section_h2" data-aos="zoom-in-up" data-aos-duration="600">Contact me<span>.</span></h2>
+            <h3 class="section_h3" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="100">Ready to bring your ideas to life?</h3>
+            <p class="text_p" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                Available to <span class="bold">listen</span> any proposal and for <span class="bold">work</span> together.
+            </p>
             <div class="contact_container flex flex-wrap">
-                <a href="" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
+                <a href="" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank" data-aos="zoom-out-up" data-aos-duration="700" data-aos-delay="250">
                     <img src="assets/logoWhastApp.webp" alt="WhatsApp" class="contact__link-img" loading="lazy">
                     <h6 class="contact__link-h6">WhatsApp</h6>
                 </a>
-                <a href="https://www.linkedin.com/in/gabriel-alejandro-flores-villagomez-65bb80253/" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
+                <a href="https://www.linkedin.com/in/gabriel-alejandro-flores-villagomez-65bb80253/" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank" data-aos="zoom-out-up" data-aos-duration="700" data-aos-delay="250">
                     <img src="assets/logoLinkedIn.webp" alt="LinkedIn" class="contact__link-img" loading="lazy">
                     <h6 class="contact__link-h6">LinkedIn</h6>
                 </a>
-                <a href="https://github.com/GabrielFloresD" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
+                <a href="https://github.com/GabrielFloresD" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank" data-aos="zoom-out-up" data-aos-duration="700" data-aos-delay="250">
                     <img src="assets/logoGitHub.webp" alt="GitHub" class="contact__link-img" loading="lazy">
                     <h6 class="contact__link-h6">GitHub</h6>
                 </a>
@@ -308,6 +311,10 @@
             <p class="footer__text">All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="index.js"></script>
 </body>
 </html>

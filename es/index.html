@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Flores | Desarrollador Front-end</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../fonts.css">
+    <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d63180f787.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="body dark">
+    <header id="header" class="flex">
+        <nav id="navbar" class="header_nav flex flex-align-center">
+            <a href="index.html" class="nav_logo flex flex-align-center">
+                <img src="../assets/logo.png" alt="Logo de Gabriel Flores" class="logo_img">
+            </a>
+            <span class="nav_space"></span>
+            <button type="button" id="btn-menu">
+                <span class="btn_bars"></span>
+            </button>
+            <ul class="nav_ul-mobile flex flex-d-column">
+                <li class="ul-mobile_li">
+                    <a href="#home" class="ul-mobile__link active-link">
+                        <ion-icon class="link_icon" name="home"></ion-icon>
+                        <span class="link_text">Inicio</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#about" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="person"></ion-icon>
+                        <span class="link_text">Sobre mi</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#services" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="stats-chart-sharp"></ion-icon>
+                        <span class="link_text">Servicios</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#projects" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="file-tray-full"></ion-icon>
+                        <span class="link_text">Proyectos</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <a href="#contact" class="ul-mobile__link">
+                        <ion-icon class="link_icon" name="call"></ion-icon>
+                        <span class="link_text">Contacto</span>
+                    </a>
+                </li>
+                <li class="ul-mobile_li">
+                    <button type="button" id="btn-language" class="flex">
+                        <ion-icon class="link_icon" name="language"></ion-icon>
+                        <span class="link_text">Idioma</span>
+                        <i class="lang_arrow fa-solid fa-caret-down"></i>
+                    </button>
+                    <ul class="language_ul flex flex-d-column">
+                        <li class="language__li">
+                            <a href="../" class="language__li-link">Inglés</a>
+                        </li>
+                        <li class="language__li">
+                            <a class="language__li-link">Español</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button type="button" id="btn-theme" class="header_theme flex flex-d-column flex-align-center flex-justify-center">
+            <img src="../assets/bulb.svg" alt="Bulb off" class="theme_img">
+            <span class="theme_text">Dark</span>
+        </button>
+    </header>
+    <main id="main" class="flex flex-d-column flex-align-center">
+        <section id="home">
+            <div class="home_container">
+                <h1 class="home__h1">Gabriel Flores</h1>
+                <h3 class="home__h3">Desarrollador Front-End</h3>
+            </div>
+        </section>
+        <section id="about" class="section flex flex-wrap flex-align-center">
+            <div class="about_info">
+                <h2 class="section_h2">Sobre mi<span>.</span></h2>
+                <div class="section_text flex flex-d-column">
+                    <p class="text_p">
+                        <span class="bold">Creativo</span> desarrollador front-end <span class="bold">enfocado</span> en ayudar a cualquier persona o empresa a construir proyectos web de un <span class="bold">alto nivel</span> desde Buenos Aires, Argentina.
+                    </p>
+                    <p class="text_p">
+                        Actualmente, estoy ampliando mi conocimiento de forma <span class="bold">autodidácta</span> para lograr avanzar en mi <span class="bold">desarrollo profesional</span>.
+                    </p>
+                    <p class="text_p">
+                        Cuando no estoy programando, disfruto de salidas con amigos, ir al gimnasio o jugar videojuegos.
+                    </p>
+                </div>
+            </div>
+            <div class="about_skills">
+                <h4 class="skills_h4">Habilidades</h4>
+                <div class="skills_container flex flex-wrap flex-justify-center">
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                        <img src="../assets/logoHTML.webp" alt="Logo HTML" class="skill_img" loading="lazy">
+                        <h6 class="skill_h6">HTML</h6>
+                    </div>
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                        <img src="../assets/logoCSS.webp" alt="Logo CSS" class="skill_img" loading="lazy">
+                        <h6 class="skill_h6">CSS</h6>
+                    </div>
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                        <img src="../assets/logoJS.webp" alt="Logo JavaScript" class="skill_img" loading="lazy">
+                        <h6 class="skill_h6">JavaScript</h6>
+                    </div>
+                    <div class="skills__skill flex flex-d-column flex-align-center flex-justify-center">
+                        <img src="../assets/logoGit.webp" alt="Logo Git" class="skill_img" loading="lazy">
+                        <h6 class="skill_h6">Git</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="section">
+            <h2 class="section_h2">Servicios<span>.</span></h2>
+            <div class="services_container flex flex-wrap">
+                <div class="services__service flex flex-align-center">
+                    <img src="../assets/iconResponsive.svg" alt="Representación del diseño responsive" class="service_img" loading="lazy">
+                    <div class="service_text flex flex-d-column">
+                        <h5 class="service__h5">Diseño Responsive</h5>
+                        <p class="service__p">
+                            Los mejores sitios web se pueden ver desde cualquier dispositivo y tu proyecto <span class="bold">no será la excepción</span>, estará hecho de tal forma que no tenga ningún error al <span class="bold">cambiar de pantalla</span>.
+                        </p>
+                    </div>
+                </div>
+                <div class="services__service flex flex-align-center">
+                    <img src="../assets/iconChat.svg" alt="Representación de un chat de texto" class="service_img" loading="lazy">
+                    <div class="service_text flex flex-d-column">
+                        <h5 class="service__h5">Comunicación</h5>
+                        <p class="service__p">
+                            La comunicación es <span class="bold">esencial</span> para materializar tus ideas sin problemas ni confusiones, siempre tendrás disponible mi contacto y estaré <span class="bold">atento</span> a tus sugerencias o dudas.
+                        </p>
+                    </div>
+                </div>
+                <div class="services__service flex flex-align-center">
+                    <img src="../assets/iconCode.svg" alt="Representación del código de una página" class="service_img" loading="lazy">
+                    <div class="service_text flex flex-d-column">
+                        <h5 class="service__h5">Código de la Página</h5>
+                        <p class="service__p">
+                            El código del proyecto estará a <span class="bold">tu disposición</span>, podrás consultarme por el progreso y/o por si quieres cambios.
+                        </p>
+                    </div>
+                </div>
+                <div class="services__service flex flex-align-center">
+                    <img src="../assets/iconTime.svg" alt="Representación del tiempo" class="service_img" loading="lazy">
+                    <div class="service_text flex flex-d-column">
+                        <h5 class="service__h5">Tiempo de Realización</h5>
+                        <p class="service__p">
+                            El proyecto será <span class="bold">priorizado</span> para ser entregado en <span class="bold">tiempo y forma</span>, recuerda que estaremos en contacto si es necesario.
+                        </p>
+                    </div>
+                </div>
+                <div class="services__service flex flex-align-center">
+                    <img src="../assets/iconSEO.svg" alt="Representación del SEO" class="service_img" loading="lazy">
+                    <div class="service_text flex flex-d-column">
+                        <h5 class="service__h5">Optimización para Motores de Búsqueda</h5>
+                        <p class="service__p">
+                            La página estará <span class="bold">estratégicamente</span> realizada con el objetivo de lograr la optimización necesaria para que los usuarios encuentren e ingresen con <span class="bold">facilidad</span> al sitio web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2 class="section_h2">Proyectos<span>.</span></h2>
+            <div class="projects_container flex flex-wrap flex-justify-center">
+                <div class="projects__card flex flex-align-center">
+                    <img src="../assets/economipediaMobile.webp" alt="Economipedia - Digital School of Financial Education" class="card_img" loading="lazy">
+                    <div class="card_text flex flex-d-column">
+                        <h4 class="card__h4">Economipedia - Escuela Digital</h4>
+                        <div class="card__langs flex">
+                            <i class="card__langs-i fa-brands fa-html5"></i>
+                            <i class="card__langs-i fa-brands fa-css3-alt"></i>
+                        </div>
+                        <p class="card__p">
+                            Un <span class="bold">rediseño</span> de Economipedia, una Escuela Digital de Educación Financiera de España. Cuenta con <span class="bold">varias secciones</span> y apartados, algunos con más cambios que otros.
+                        </p>
+                        <span class="card__space"></span>
+                        <div class="card__links flex flex-d-column">
+                            <a href="https://github.com/GabrielFloresD/Redesign-for-Economipedia" class="card__links-code flex flex-align-center" target="_blank">
+                                <span>Código</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </a>
+                            <a href="https://gabrielfloresd.github.io/Redesign-for-Economipedia/" class="card__links-web flex flex-align-center" target="_blank">
+                                <span>Ir al sitio</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__card flex flex-align-center">
+                    <img src="../assets/toolPageMobile.webp" alt="toolPage" class="card_img" loading="lazy">
+                    <div class="card_text flex flex-d-column">
+                        <h4 class="card__h4">toolPage</h4>
+                        <div class="card__langs flex">
+                            <i class="card__langs-i fa-brands fa-html5"></i>
+                            <i class="card__langs-i fa-brands fa-css3-alt"></i>
+                            <i class="card__langs-i fa-brands fa-square-js"></i>
+                        </div>
+                        <p class="card__p">
+                            Un sitio web destinado a <span class="bold">desarrolladores</span> que incluye <span class="bold">herramientas</span> para ayudar en el diseño de páginas, como por ejemplo: paletas, íconos, fuentes, etc.
+                        </p>
+                        <span class="card__space"></span>
+                        <div class="card__links flex flex-d-column">
+                            <a href="https://github.com/GabrielFloresD/toolPage" class="card__links-code flex flex-align-center" target="_blank">
+                                <span>Código</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </a>
+                            <a href="https://gabrielfloresd.github.io/toolPage/" class="card__links-web flex flex-align-center" target="_blank">
+                                <span>Ir al sitio</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__card flex flex-align-center">
+                    <img src="../assets/loginPageMobile.webp" alt="Login Page" class="card_img" loading="lazy">
+                    <div class="card_text flex flex-d-column">
+                        <h4 class="card__h4">Login Page</h4>
+                        <div class="card__langs flex">
+                            <i class="card__langs-i fa-brands fa-html5"></i>
+                            <i class="card__langs-i fa-brands fa-css3-alt"></i>
+                            <i class="card__langs-i fa-brands fa-square-js"></i>
+                        </div>
+                        <p class="card__p">
+                            Una página de inicio de sesión que incluye un fondo <span class="bold">animado</span> y ciertos <span class="bold">elementos</span> característicos de las páginas de este tipo.
+                        </p>
+                        <span class="card__space"></span>
+                        <div class="card__links flex flex-d-column">
+                            <a href="https://github.com/GabrielFloresD/Login_page" class="card__links-code flex flex-align-center" target="_blank">
+                                <span>Código</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </a>
+                            <a href="https://gabrielfloresd.github.io/Login_page/" class="card__links-web flex flex-align-center" target="_blank">
+                                <span>Ir al sitio</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__card flex flex-align-center">
+                    <img src="../assets/monsterEnergyMobile.webp" alt="Monster Energy Drinks" class="card_img" loading="lazy">
+                    <div class="card_text flex flex-d-column">
+                        <h4 class="card__h4">Monster Energy</h4>
+                        <div class="card__langs flex">
+                            <i class="card__langs-i fa-brands fa-html5"></i>
+                            <i class="card__langs-i fa-brands fa-css3-alt"></i>
+                            <i class="card__langs-i fa-brands fa-square-js"></i>
+                        </div>
+                        <p class="card__p">
+                            Un <span class="bold">rediseño</span> del sitio web Monster Energy, conocidas bebidas energéticas. Cuenta con un <span class="bold">menú desplegable</span>, animaciones y fichas con desplazamiento.
+                        </p>
+                        <span class="card__space"></span>
+                        <div class="card__links flex flex-d-column">
+                            <a href="https://github.com/GabrielFloresD/Product_Landing_Page" class="card__links-code flex flex-align-center" target="_blank">
+                                <span>Código</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </a>
+                            <a href="https://gabrielfloresd.github.io/Product_Landing_Page/" class="card__links-web flex flex-align-center" target="_blank">
+                                <span>Ir al sitio</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2 class="section_h2">Contáctame<span>.</span></h2>
+            <h3 class="section_h3">¿Listo para darle vida a tus ideas?</h3>
+            <p class="text_p">Disponible a <span class="bold">escuchar</span> cualquier propuesta y poder <span class="bold">trabajar</span> juntos.</p>
+            <div class="contact_container flex flex-wrap">
+                <a href="" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
+                    <img src="../assets/logoWhastApp.webp" alt="Logo WhatsApp" class="contact__link-img" loading="lazy">
+                    <h6 class="contact__link-h6">WhatsApp</h6>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-alejandro-flores-villagomez-65bb80253/" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
+                    <img src="../assets/logoLinkedIn.webp" alt="Logo LinkedIn" class="contact__link-img" loading="lazy">
+                    <h6 class="contact__link-h6">LinkedIn</h6>
+                </a>
+                <a href="https://github.com/GabrielFloresD" class="contact__link flex flex-d-column flex-align-center flex-justify-center" target="_blank">
+                    <img src="../assets/logoGitHub.webp" alt="Logo GitHub" class="contact__link-img" loading="lazy">
+                    <h6 class="contact__link-h6">GitHub</h6>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer_container">
+            <p class="footer__text">
+                Copyright © 2023 <a href="index.html" class="footer__text-link">Gabriel Flores</a> - Desarrollador Web Front-End.
+            </p>
+            <p class="footer__text">Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="../index.js"></script>
+</body>
+</html>

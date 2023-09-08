@@ -92,13 +92,15 @@ toggleTheme.addEventListener("click", ()=> {
     if (bodyElement.classList.contains("dark")) {
         bodyElement.classList.remove("dark");
         bodyElement.classList.add("light");
-        themeText.textContent = "Light"
+        themeText.textContent = "Light";
+        themeText.setAttribute("alt","Bulb on");
         return;
     };
     if (bodyElement.classList.contains("light")) {
         bodyElement.classList.remove("light");
         bodyElement.classList.add("dark");
-        themeText.textContent = "Dark"
+        themeText.textContent = "Dark";
+        themeText.setAttribute("alt","Bulb off");
         return;
     };
 });

@@ -25,6 +25,12 @@ const main = document.getElementById("main");
 
 const menuLinks = document.querySelectorAll(".ul-mobile__link");
 
+const closeMenu = () => {
+    menu.classList.remove("menu-visible");
+    menu.classList.add("menu-not-visible");
+    toggleMenu.classList.remove("active");
+}
+
 toggleMenu.addEventListener("click", () => {
     menu.classList.toggle("menu-visible");
     toggleMenu.classList.toggle("active");
@@ -32,18 +38,10 @@ toggleMenu.addEventListener("click", () => {
     if (menu.classList.contains("menu-visible")) {
         header.classList.add("header-scroll")
         // Mouse when "click" main, menu close
-        main.addEventListener("click", () => {
-            menu.classList.remove("menu-visible");
-            menu.classList.add("menu-not-visible");
-            toggleMenu.classList.remove("active");
-        });
+        main.addEventListener("click", closeMenu);
         // Mouse when "click" an option, menu close
         menuLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("menu-visible");
-                menu.classList.add("menu-not-visible");
-                toggleMenu.classList.remove("active");
-            })
+            link.addEventListener("click", closeMenu)
         })
         return;
     } else {
@@ -90,21 +88,22 @@ const themeBulb = document.querySelector(".theme_img");
 
 const bodyElement = document.querySelector(".body");
 
-toggleTheme.addEventListener("click", ()=> {
+const changeTheme = (from, to, turn, text) => {
+    bodyElement.classList.remove(`${from}`);
+    bodyElement.classList.add(`${to}`);
+    themeText.textContent = `${text}`;
+    themeBulb.setAttribute("alt",`Bulb ${turn}`);
+}
+
+toggleTheme.addEventListener("click", function () {
     if (bodyElement.classList.contains("dark")) {
-        bodyElement.classList.remove("dark");
-        bodyElement.classList.add("light");
-        themeText.textContent = "Light";
-        themeBulb.setAttribute("alt","Bulb on");
+        changeTheme("dark","light","on","Light");
         return;
-    };
+    }
     if (bodyElement.classList.contains("light")) {
-        bodyElement.classList.remove("light");
-        bodyElement.classList.add("dark");
-        themeText.textContent = "Dark";
-        themeBulb.setAttribute("alt","Bulb off");
+        changeTheme("light","dark","off","Dark");
         return;
-    };
+    }
 });
 
 // HEADER - efect for links "linkes" to sections
@@ -139,23 +138,15 @@ const tabletMedia = window.matchMedia("(width >= 768px)");
 
 const desktopMedia = window.matchMedia("(width >= 1024px)");
 
-if (mobileMedia.matches) {
-    projectImages[0].setAttribute("src","assets/economipedia.webp");
-    projectImages[1].setAttribute("src","assets/toolPage.webp");
-    projectImages[2].setAttribute("src","assets/loginPage.webp");
-    projectImages[3].setAttribute("src","assets/monsterEnergy.webp");
+const changeImages = (media,img) => {
+    if (media.matches) {
+        projectImages[0].setAttribute("src",`assets/economipedia${img}.webp`);
+        projectImages[1].setAttribute("src",`assets/toolPage${img}.webp`);
+        projectImages[2].setAttribute("src",`assets/loginPage${img}.webp`);
+        projectImages[3].setAttribute("src",`assets/monsterEnergy${img}.webp`);
+    }
 }
 
-if (tabletMedia.matches) {
-    projectImages[0].setAttribute("src","assets/economipediaTablet.webp");
-    projectImages[1].setAttribute("src","assets/toolPageTablet.webp");
-    projectImages[2].setAttribute("src","assets/loginPageTablet.webp");
-    projectImages[3].setAttribute("src","assets/monsterEnergyTablet.webp");
-}
-
-if (desktopMedia.matches) {
-    projectImages[0].setAttribute("src","assets/economipedia.webp");
-    projectImages[1].setAttribute("src","assets/toolPage.webp");
-    projectImages[2].setAttribute("src","assets/loginPage.webp");
-    projectImages[3].setAttribute("src","assets/monsterEnergy.webp");
-}
+changeImages(mobileMedia,"");
+changeImages(tabletMedia,"Tablet");
+changeImages(desktopMedia,"");

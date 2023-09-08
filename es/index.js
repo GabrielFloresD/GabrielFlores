@@ -94,15 +94,15 @@ toggleTheme.addEventListener("click", ()=> {
     if (bodyElement.classList.contains("dark")) {
         bodyElement.classList.remove("dark");
         bodyElement.classList.add("light");
-        themeText.textContent = "Light";
-        themeBulb.setAttribute("alt","Bulb on");
+        themeText.textContent = "Claro";
+        themeBulb.setAttribute("alt","Lámpara prendida");
         return;
     };
     if (bodyElement.classList.contains("light")) {
         bodyElement.classList.remove("light");
         bodyElement.classList.add("dark");
-        themeText.textContent = "Dark";
-        themeBulb.setAttribute("alt","Bulb off");
+        themeText.textContent = "Oscuro";
+        themeBulb.setAttribute("alt","Lámpara apagada");
         return;
     };
 });
@@ -140,22 +140,22 @@ const tabletMedia = window.matchMedia("(width >= 768px)");
 const desktopMedia = window.matchMedia("(width >= 1024px)");
 
 if (mobileMedia.matches) {
-    projectImages[0].setAttribute("src","assets/economipedia.webp");
-    projectImages[1].setAttribute("src","assets/toolPage.webp");
-    projectImages[2].setAttribute("src","assets/loginPage.webp");
-    projectImages[3].setAttribute("src","assets/monsterEnergy.webp");
+    projectImages[0].setAttribute("src","../assets/economipedia.webp");
+    projectImages[1].setAttribute("src","../assets/toolPage.webp");
+    projectImages[2].setAttribute("src","../assets/loginPage.webp");
+    projectImages[3].setAttribute("src","../assets/monsterEnergy.webp");
 }
 
 if (tabletMedia.matches) {
-    projectImages[0].setAttribute("src","assets/economipediaTablet.webp");
-    projectImages[1].setAttribute("src","assets/toolPageTablet.webp");
-    projectImages[2].setAttribute("src","assets/loginPageTablet.webp");
-    projectImages[3].setAttribute("src","assets/monsterEnergyTablet.webp");
+    projectImages[0].setAttribute("src","../assets/economipediaTablet.webp");
+    projectImages[1].setAttribute("src","../assets/toolPageTablet.webp");
+    projectImages[2].setAttribute("src","../assets/loginPageTablet.webp");
+    projectImages[3].setAttribute("src","../assets/monsterEnergyTablet.webp");
 }
 
 if (desktopMedia.matches) {
-    projectImages[0].setAttribute("src","assets/economipedia.webp");
-    projectImages[1].setAttribute("src","assets/toolPage.webp");
-    projectImages[2].setAttribute("src","assets/loginPage.webp");
-    projectImages[3].setAttribute("src","assets/monsterEnergy.webp");
+    projectImages[0].setAttribute("src","../assets/economipedia.webp");
+    projectImages[1].setAttribute("src","../assets/toolPage.webp");
+    projectImages[2].setAttribute("src","../assets/loginPage.webp");
+    projectImages[3].setAttribute("src","../assets/monsterEnergy.webp");
 }
